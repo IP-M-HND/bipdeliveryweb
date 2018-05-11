@@ -25,7 +25,7 @@ $placholder_search=Yii::t("default",$placholder_search);
 <?php if ( $home_search_mode=="address" || $home_search_mode=="") :?>
 <img class="mobile-home-banner" src="<?php echo assetsURL()."/images/banner.jpg"?>">
 
-<div id="parallax-wrap" class="parallax-container parallax-home"
+<div id="parallax-wrap"  class="parallax-container parallax-home"
 data-parallax="scroll" data-position="top" data-bleed="10"
 data-image-src="<?php echo assetsURL()."/images/banner.jpg"?>">
 

@@ -15,7 +15,7 @@ $patern.="|voguepaynotify|voguepaysuccess|voguepayfailed|voginit|vognotify|vogin
 $patern=strtolower($patern);
 
 return array(
-	'name'=>'Bip Bip Delivery',
+	'name'=>'Karinderia Multiple Restaurant',
 
 	'defaultController'=>'store',
 
@@ -106,7 +106,7 @@ return array(
 		'connectionString' => 'mysql:host=localhost;dbname=karenderia',
 		'emulatePrepare'   => true,
 		'username'         => 'root',
-		'password'         => 'delivery18',
+		'password'         => '',
 		'charset'          => 'utf8',
 		'tablePrefix'      => 'mt_',
 		),

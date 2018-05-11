@@ -1,5 +1,5 @@
 
-@media only screen and (max-width : 1024px) 
+@media only screen and (max-width : 1024px)
 {
 
 .top-menu-wrapper img.logo{
@@ -25,7 +25,7 @@ color:#0d1115;
 .top-menu-wrapper
 {
 position:relative;
-background:#f75d34;
+background:#ff5c30;
 border-bottom:2px solid #14171b;
 }
 
@@ -45,7 +45,7 @@ display:none;
 background-image:none !important;
 }
 
-.menu-right-content.modal 
+.menu-right-content.modal
 {
 padding-top:20px;
 }
@@ -144,7 +144,7 @@ width:100%;
 
 }
 
-@media only screen and (max-width : 970px) 
+@media only screen and (max-width : 970px)
 {
 
 .top-menu-wrapper img.logo{
@@ -181,7 +181,7 @@ margin-right:0;
  min-height: auto;
 }
 .container-map .dim{
-background: rgb(6, 6, 6); 
+background: rgb(6, 6, 6);
 background:rgba(6, 6, 6, 0.9);
 border-bottom:none;
 }
@@ -293,7 +293,7 @@ width:auto;
 
 }
 
-@media only screen and (max-width : 750px) 
+@media only screen and (max-width : 750px)
 {
 
 .result-merchant .logo-medium {
@@ -505,7 +505,7 @@ font-size:20px;
 }
 
 
-@media only screen and (max-width : 480px) 
+@media only screen and (max-width : 480px)
 {
 
 .top-menu-wrapper img.logo{

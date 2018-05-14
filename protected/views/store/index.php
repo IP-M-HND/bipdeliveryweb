@@ -144,7 +144,7 @@ data-image-src="<?php echo assetsURL()."/images/b6.jpg"?>">
 
           <div class="row">
               <div class="col-sm-5">
-		          <div class="rating-stars" data-score="<?php echo $ratings['ratings']?>"></div>
+		          <div class="rating-stars hidden" data-score="<?php echo $ratings['ratings']?>"></div>
 	          </div>
 	          <div class="col-sm-2 merchantopentag">
 	          <?php echo FunctionsV3::merchantOpenTag($val['merchant_id'])?>

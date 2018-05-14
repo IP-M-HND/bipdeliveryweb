@@ -48,5 +48,3 @@ $config=dirname(__FILE__).'/protected/config/main.php';
 
 // create a Web application instance and run
 Yii::createWebApplication($config)->run();
-
-//comentario ejemplo

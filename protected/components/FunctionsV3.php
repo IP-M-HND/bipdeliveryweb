@@ -62,7 +62,7 @@ class FunctionsV3
 			$htm.=$website_address." ".yii::app()->functions->adminCountry().'<br/>';
 		}
 		if (!empty($website_contact_phone)){
-			$htm.=t("Call Us")." $website_contact_phone <br/>";
+			$htm.=t("Llamanos ")." $website_contact_phone <br/>";
 		}
 		if (!empty($website_contact_email)){
 			$htm.="$website_contact_email";

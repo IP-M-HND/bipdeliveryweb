@@ -8,7 +8,7 @@ if (FunctionsV3::hasModuleAddon("pointsprogram")){
 $merchant_photo_bg=getOption($merchant_id,'merchant_photo_bg');
 if ( !file_exists(FunctionsV3::uploadPath()."/$merchant_photo_bg")){
 	$merchant_photo_bg='';
-} 
+}
 
 /*RENDER MENU HEADER FILE*/
 
@@ -20,8 +20,8 @@ $min_fees=FunctionsV3::getMinOrderByTableRates($merchant_id,
    $data['minimum_order']
 );
 
-$ratings=Yii::app()->functions->getRatings($merchant_id);   
-$merchant_info=array(   
+$ratings=Yii::app()->functions->getRatings($merchant_id);
+$merchant_info=array(
   'merchant_id'=>$merchant_id ,
   //'minimum_order'=>$data['minimum_order'],
   'minimum_order'=>$min_fees,
@@ -46,7 +46,7 @@ $cs->registerScript(
   'merchant_information',
   "var merchant_information =".json_encode($merchant_info)."",
   CClientScript::POS_HEAD
-);		
+);
 
 /*PROGRESS ORDER BAR*/
 $this->renderPartial('/front/order-progress-bar',array(
@@ -57,8 +57,8 @@ $this->renderPartial('/front/order-progress-bar',array(
 $now=date('Y-m-d');
 $now_time='';
 
-$checkout=FunctionsV3::isMerchantcanCheckout($merchant_id); 
-$menu=Yii::app()->functions->getMerchantMenu($merchant_id , isset($_GET['sname'])?$_GET['sname']:'' ); 
+$checkout=FunctionsV3::isMerchantcanCheckout($merchant_id);
+$menu=Yii::app()->functions->getMerchantMenu($merchant_id , isset($_GET['sname'])?$_GET['sname']:'' );
 //dump($menu);die();
 
 //dump($checkout);
@@ -82,24 +82,24 @@ echo CHtml::hiddenField('accept_booking_sameday',getOption($merchant_id
 echo CHtml::hiddenField('customer_ask_address',getOptionA('customer_ask_address'));
 
 echo CHtml::hiddenField('merchant_required_delivery_time',
-  Yii::app()->functions->getOption("merchant_required_delivery_time",$merchant_id));   
-  
+  Yii::app()->functions->getOption("merchant_required_delivery_time",$merchant_id));
+
 /** add minimum order for pickup status*/
 $merchant_minimum_order_pickup=Yii::app()->functions->getOption('merchant_minimum_order_pickup',$merchant_id);
 if (!empty($merchant_minimum_order_pickup)){
 	  echo CHtml::hiddenField('merchant_minimum_order_pickup',$merchant_minimum_order_pickup);
-	  
+
 	  echo CHtml::hiddenField('merchant_minimum_order_pickup_pretty',
          displayPrice(baseCurrency(),prettyFormat($merchant_minimum_order_pickup)));
 }
- 
+
 $merchant_maximum_order_pickup=Yii::app()->functions->getOption('merchant_maximum_order_pickup',$merchant_id);
 if (!empty($merchant_maximum_order_pickup)){
 	  echo CHtml::hiddenField('merchant_maximum_order_pickup',$merchant_maximum_order_pickup);
-	  
+
 	  echo CHtml::hiddenField('merchant_maximum_order_pickup_pretty',
          displayPrice(baseCurrency(),prettyFormat($merchant_maximum_order_pickup)));
-}  
+}
 
 /*add minimum and max for delivery*/
 //$minimum_order=Yii::app()->functions->getOption('merchant_minimum_order',$merchant_id);
@@ -126,7 +126,7 @@ if (is_numeric($merchant_delivery_distance)){
 			$is_ok_delivered=1;
 		}
 	}
-} 
+}
 
 echo CHtml::hiddenField('is_ok_delivered',$is_ok_delivered);
 echo CHtml::hiddenField('merchant_delivery_miles',$merchant_delivery_distance);
@@ -164,13 +164,13 @@ Yii::app()->getBaseUrl(true).FunctionsV3::getMerchantLogo($merchant_id)
 ,'og:image');
 
 $remove_delivery_info=false;
-if($data['service']==3 || $data['service']==6 || $data['service']==7 ){	
+if($data['service']==3 || $data['service']==6 || $data['service']==7 ){
 	$remove_delivery_info=true;
 }
 
 /*CHECK IF MERCHANT SET TO PREVIEW*/
 $is_preview=false;
-if ($food_viewing_private==2){		
+if ($food_viewing_private==2){
 	if (isset($_GET['preview'])){
 		if($_GET['preview']=='true'){
 			if(!isset($_GET['token'])){
@@ -192,57 +192,57 @@ if ($food_viewing_private==2){
 <div class="container">
   <div class="row">
 
-     <div class="col-md-8 border menu-left-content">
-         
+     <div class="col-md-12 border menu-left-content">
+
         <div class="tabs-wrapper" id="menu-tab-wrapper">
 	    <ul id="tabs">
 		    <li class="active">
 		       <span><?php echo t("Menu")?></span>
 		       <i class="ion-fork"></i>
 		    </li>
-		    
+
 		    <?php if ($theme_hours_tab==""):?>
 		    <li>
 		       <span><?php echo t("Opening Hours")?></span>
 		       <i class="ion-clock"></i>
 		    </li>
 		    <?php endif;?>
-		    
+
 		    <?php if ($theme_reviews_tab==""):?>
 		    <li class="view-reviews">
 		       <span><?php echo t("Reviews")?></span>
 		       <i class="ion-ios-star-half"></i>
 		    </li>
 		    <?php endif;?>
-		    
+
 		    <?php if ($theme_map_tab==""):?>
 		    <li class="view-merchant-map">
 		       <span><?php echo t("Map")?></span>
 		       <i class="ion-ios-navigate-outline"></i>
 		    </li>
 		    <?php endif;?>
-		    
+
 		    <?php if ($booking_enabled):?>
 		      <li>
 		      <span><?php echo t("Book a Table")?></span>
 		      <i class="ion-coffee"></i>
 		      </li>
 		    <?php endif;?>
-		    
+
 		    <?php if ($photo_enabled):?>
 		      <li class="view-merchant-photos">
 		       <span><?php echo t("Photos")?></span>
 		       <i class="ion-images"></i>
 		      </li>
 		    <?php endif;?>
-		    
+
 		    <?php if ($theme_info_tab==""):?>
 		    <li>
 		      <span><?php echo t("Information")?></span>
 		      <i class="ion-ios-information-outline"></i>
 		    </li>
 		    <?php endif;?>
-		    
+
 		    <?php if ( $promo['enabled']==2 && $theme_promo_tab==""):?>
 		      <li>
 		       <span><?php echo t("Promos")?></span>
@@ -250,28 +250,28 @@ if ($food_viewing_private==2){
 		      </li>
 		    <?php endif;?>
 		</ul>
-		
+
 		<ul id="tab">
-		
+
 		<!--MENU-->
 	    <li class="active">
 	        <div class="row">
 			 <div class="col-md-4 col-xs-4 border category-list">
 				<div class="theiaStickySidebar">
-				 <?php 
+				 <?php
 				 $this->renderPartial('/front/menu-category',array(
 				  'merchant_id'=>$merchant_id,
-				  'menu'=>$menu			  
+				  'menu'=>$menu
 				 ));
 				 ?>
 				</div>
 			 </div> <!--col-->
 			 <div class="col-md-8 col-xs-8 border" id="menu-list-wrapper">
-			 
+
 			 <?php if($enabled_food_search_menu==1):?>
-			 <form method="GET" class="frm-search-food">			   
-			 
-			 <?php 
+			 <form method="GET" class="frm-search-food">
+
+			 <?php
 			 if($is_preview==true){
 				 if(isset($_GET['preview'])){
 				 	echo CHtml::hiddenField('preview','true');
@@ -281,8 +281,8 @@ if ($food_viewing_private==2){
 				 }
 			 }
 			 ?>
-			 
-			 <div class="search-food-wrap">						   
+
+			 <div class="search-food-wrap">
 			   <?php echo CHtml::textField('sname',
 			   isset($_GET['sname'])?$_GET['sname']:''
 			   ,array(
@@ -291,7 +291,7 @@ if ($food_viewing_private==2){
 			   ))?>
 			   <button type="submit"><i class="ion-ios-search"></i></button>
 			 </div>
-			 <?php if (isset($_GET['sname'])):?> 
+			 <?php if (isset($_GET['sname'])):?>
 			     <a href="<?php echo Yii::app()->createUrl('store/menu-'.$data['restaurant_slug'])?>">
 			     [<?php echo t("Clear")?>]
 			     </a>
@@ -299,22 +299,22 @@ if ($food_viewing_private==2){
 			   <?php endif;?>
 			 </form>
 			 <?php endif;?>
-			 
-			 <?php 
-			 $admin_activated_menu=getOptionA('admin_activated_menu');			 
+
+			 <?php
+			 $admin_activated_menu=getOptionA('admin_activated_menu');
 			 $admin_menu_allowed_merchant=getOptionA('admin_menu_allowed_merchant');
-			 if ($admin_menu_allowed_merchant==2){			 	 
-			 	 $temp_activated_menu=getOption($merchant_id,'merchant_activated_menu');			 	 
+			 if ($admin_menu_allowed_merchant==2){
+			 	 $temp_activated_menu=getOption($merchant_id,'merchant_activated_menu');
 			 	 if(!empty($temp_activated_menu)){
 			 	 	 $admin_activated_menu=$temp_activated_menu;
 			 	 }
-			 }			 
-			 
+			 }
+
 			 $merchant_tax=getOption($merchant_id,'merchant_tax');
 			 if($merchant_tax>0){
 			    $merchant_tax=$merchant_tax/100;
 			 }
-				
+
 			 switch ($admin_activated_menu)
 			 {
 			 	case 1:
@@ -324,16 +324,16 @@ if ($food_viewing_private==2){
 					  'disabled_addcart'=>$disabled_addcart
 					));
 			 		break;
-			 		
-			 	case 2:			 		
+
+			 	case 2:
 			 		$this->renderPartial('/front/menu-merchant-3',array(
 					  'merchant_id'=>$merchant_id,
 					  'menu'=>$menu,
 					  'disabled_addcart'=>$disabled_addcart
 					));
 			 		break;
-			 			
-			 	default:	
+
+			 	default:
 				 	$this->renderPartial('/front/menu-merchant-1',array(
 					  'merchant_id'=>$merchant_id,
 					  'menu'=>$menu,
@@ -343,67 +343,67 @@ if ($food_viewing_private==2){
 					  'merchant_tax'=>$merchant_tax>0?$merchant_tax:0,
 					));
 			    break;
-			 }			 
-			 ?>			
+			 }
+			 ?>
 			 </div> <!--col-->
 			</div> <!--row-->
 	    </li>
 	    <!--END MENU-->
-	    
-	    
+
+
 	    <!--OPENING HOURS-->
 	    <?php if ($theme_hours_tab==""):?>
-	    <li>	       	     
+	    <li>
 	    <?php
 	    $this->renderPartial('/front/merchant-hours',array(
 	      'merchant_id'=>$merchant_id
-	    )); ?>           
+	    )); ?>
 	    </li>
 	    <?php endif;?>
 	    <!--END OPENING HOURS-->
-	    
+
 	    <!--MERCHANT REVIEW-->
 	    <?php if ($theme_reviews_tab==""):?>
-	    <li class="review-tab-content">	       	     
+	    <li class="review-tab-content">
 	    <?php $this->renderPartial('/front/merchant-review',array(
 	      'merchant_id'=>$merchant_id
-	    )); ?>           
+	    )); ?>
 	    </li>
 	    <?php endif;?>
 	    <!--END MERCHANT REVIEW-->
-	    
+
 	    <!--MERCHANT MAP-->
 	    <?php if ($theme_map_tab==""):?>
-	    <li>	        	
-	    <?php $this->renderPartial('/front/merchant-map'); ?>        
+	    <li>
+	    <?php $this->renderPartial('/front/merchant-map'); ?>
 	    </li>
 	    <?php endif;?>
 	    <!--END MERCHANT MAP-->
-	    
+
 	    <!--BOOK A TABLE-->
 	    <?php if ($booking_enabled):?>
 	    <li>
 	    <?php $this->renderPartial('/front/merchant-book-table',array(
 	      'merchant_id'=>$merchant_id
-	    )); ?>        
+	    )); ?>
 	    </li>
 	    <?php endif;?>
 	    <!--END BOOK A TABLE-->
-	    
+
 	    <!--PHOTOS-->
 	    <?php if ($photo_enabled):?>
 	    <li>
-	    <?php 
+	    <?php
 	    $gallery=Yii::app()->functions->getOption("merchant_gallery",$merchant_id);
         $gallery=!empty($gallery)?json_decode($gallery):false;
 	    $this->renderPartial('/front/merchant-photos',array(
 	      'merchant_id'=>$merchant_id,
 	      'gallery'=>$gallery
-	    )); ?>        
+	    )); ?>
 	    </li>
 	    <?php endif;?>
 	    <!--END PHOTOS-->
-	    
+
 	    <!--INFORMATION-->
 	    <?php if ($theme_info_tab==""):?>
 	    <li>
@@ -413,46 +413,46 @@ if ($food_viewing_private==2){
 	    </li>
 	    <?php endif;?>
 	    <!--END INFORMATION-->
-	    
+
 	    <!--PROMOS-->
 	    <?php if ( $promo['enabled']==2 && $theme_promo_tab==""):?>
 	    <li>
 	    <?php $this->renderPartial('/front/merchant-promo',array(
 	      'merchant_id'=>$merchant_id,
 	      'promo'=>$promo
-	    )); ?>        
+	    )); ?>
 	    </li>
 	    <?php endif;?>
 	    <!--END PROMOS-->
-	    
-	    
+
+
 	   </ul>
 	   </div>
-     
+
      </div> <!-- menu-left-content-->
-     
+
      <?php if (getOptionA('disabled_website_ordering')!="yes"):?>
-     <div id="menu-right-content" class="col-md-4 border menu-right-content <?php echo $disabled_addcart=="yes"?"hide":''?>" >
-     
+     <div id="menu-right-content" class="hidden col-md-4 border menu-right-content <?php echo $disabled_addcart=="yes"?"hide":''?>" >
+
      <div class="theiaStickySidebar">
       <div class="box-grey rounded  relative">
-              
+
         <!--DELIVERY INFO-->
         <?php if ($remove_delivery_info==false):?>
         <div class="star-float"></div>
         <div class="inner center">
          <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
-         </button> 
-                   
+         </button>
+
             <?php if ($data['service']==3):?>
             <p class="bold"><?php echo t("Distance Information")?></p>
             <?php else :?>
 	        <p class="bold"><?php echo t("Delivery Information")?></p>
 	        <?php endif;?>
-	        
+
 	        <p>
-	        <?php 
+	        <?php
 	        if(!$search_by_location){
 		        if ($distance){
 		        	echo t("Distance").": ".number_format($distance,1)." $distance_type";
@@ -460,12 +460,12 @@ if ($food_viewing_private==2){
 	        }
 	        ?>
 	        </p>
-	        
+
 	        <p class="delivery-fee-wrap">
 	        <?php echo t("Delivery Est")?>: <?php echo FunctionsV3::getDeliveryEstimation($merchant_id)?></p>
-	        
+
 	        <p class="delivery-fee-wrap">
-	        <?php 
+	        <?php
 	        if(!$search_by_location){
 		        if (!empty($merchant_delivery_distance)){
 		        	echo t("Delivery Distance Covered").": ".$merchant_delivery_distance." $distance_type_orig";
@@ -473,15 +473,15 @@ if ($food_viewing_private==2){
 	        }
 	        ?>
 	        </p>
-	        
+
 	        <p class="delivery-fee-wrap">
-	        <?php 
+	        <?php
 	        if ($delivery_fee){
 	             echo t("Delivery Fee").": ".FunctionsV3::prettyPrice($delivery_fee);
 	        } else echo  t("Delivery Fee").": ".t("Free Delivery");
 	        ?>
 	        </p>
-	        
+
 	        <?php if($search_by_location):?>
 	        <a href="javascript:;" class="top10 green-color change-location block text-center">
 	        [<?php echo t("Change Location here")?>]
@@ -491,96 +491,96 @@ if ($food_viewing_private==2){
 	        [<?php echo t("Change Your Address here")?>]
 	        </a>
 	        <?php endif;?>
-	        
+
         </div>
         <!--END DELIVERY INFO-->
         <?php else :?>
-        
+
         <?php endif;?>
-        
+
         <!--CART-->
         <div class="inner line-top relative">
-        
+
            <i class="order-icon your-order-icon"></i>
-           
+
            <p class="bold center"><?php echo t("Your Order")?></p>
-           
+
            <div class="item-order-wrap"></div>
-           
+
            <!--VOUCHER STARTS HERE-->
            <?php //Widgets::applyVoucher($merchant_id);?>
            <!--VOUCHER STARTS HERE-->
-           
+
            <!--MAX AND MIN ORDR-->
            <?php if ($minimum_order>0):?>
            <div class="delivery-min">
-              <p class="small center"><?php echo Yii::t("default","Subtotal must exceed")?> 
+              <p class="small center"><?php echo Yii::t("default","Subtotal must exceed")?>
               <?php echo displayPrice(baseCurrency(),prettyFormat($minimum_order,$merchant_id))?>
            </div>
            <?php endif;?>
-           
+
            <?php if ($merchant_minimum_order_pickup>0):?>
            <div class="pickup-min">
-              <p class="small center"><?php echo Yii::t("default","Subtotal must exceed")?> 
+              <p class="small center"><?php echo Yii::t("default","Subtotal must exceed")?>
               <?php echo displayPrice(baseCurrency(),prettyFormat($merchant_minimum_order_pickup,$merchant_id))?>
            </div>
            <?php endif;?>
-                      
+
            <?php if($minimum_order_dinein>0):?>
            <div class="dinein-min">
-              <p class="small center"><?php echo Yii::t("default","Subtotal must exceed")?> 
+              <p class="small center"><?php echo Yii::t("default","Subtotal must exceed")?>
               <?php echo FunctionsV3::prettyPrice($minimum_order_dinein)?>
            </div>
            <?php endif;?>
-              
+
 	        <a href="javascript:;" class="clear-cart">[<?php echo t("Clear Order")?>]</a>
-           
+
         </div> <!--inner-->
         <!--END CART-->
-        
+
         <!--DELIVERY OPTIONS-->
         <div class="inner line-top relative delivery-option center">
            <i class="order-icon delivery-option-icon"></i>
-           
+
            <?php if ($remove_delivery_info==false):?>
              <p class="bold"><?php echo t("Delivery Options")?></p>
            <?php else :?>
              <p class="bold"><?php echo t("Options")?></p>
            <?php endif;?>
-           
+
            <?php echo CHtml::dropDownList('delivery_type',$now,
            (array)Yii::app()->functions->DeliveryOptions($merchant_id),array(
              'class'=>'grey-fields'
            ))?>
-           
+
            <?php echo CHtml::hiddenField('delivery_date',$now)?>
            <?php echo CHtml::textField('delivery_date1',
             FormatDateTime($now,false),array('class'=>"j_date grey-fields",'data-id'=>'delivery_date'))?>
-           
-           <div class="delivery_asap_wrap">            
-            <?php $detect = new Mobile_Detect;?>           
+
+           <div class="delivery_asap_wrap">
+            <?php $detect = new Mobile_Detect;?>
             <?php if ( $detect->isMobile() ) :?>
-             <?php                           
+             <?php
              echo CHtml::dropDownList('delivery_time',$now_time,
              (array)FunctionsV3::timeList()
              ,array(
               'class'=>"grey-fields"
              ))
              ?>
-            <?php else :?>                       
+            <?php else :?>
 	         <?php echo CHtml::textField('delivery_time',$now_time,
 	          array('class'=>"timepick grey-fields",'placeholder'=>Yii::t("default","Delivery Time")))?>
-	       <?php endif;?>  	          	  
+	       <?php endif;?>
 
-	          <?php if ( $checkout['is_pre_order']==2):?>         
+	          <?php if ( $checkout['is_pre_order']==2):?>
 	          <span class="delivery-asap">
 	           <?php echo CHtml::checkBox('delivery_asap',false,array('class'=>"icheck"))?>
-	            <span class="text-muted"><?php echo Yii::t("default","Delivery ASAP?")?></span>	          
-	         </span>       	         	        	     
-	         <?php endif;?>    
-	         
+	            <span class="text-muted"><?php echo Yii::t("default","Delivery ASAP?")?></span>
+	         </span>
+	         <?php endif;?>
+
            </div><!-- delivery_asap_wrap-->
-           
+
            <?php if ( $checkout['code']==1):?>
               <a href="javascript:;" class="orange-button medium checkout"><?php echo $checkout['button']?></a>
            <?php else :?>
@@ -593,16 +593,16 @@ if ($food_viewing_private==2){
                  <?php echo Yii::app()->functions->translateDate(date('F d l')."@".timeFormat(date('c'),true));?></p>
               <?php endif;?>
            <?php endif;?>
-                                                                
+
         </div> <!--inner-->
         <!--END DELIVERY OPTIONS-->
-        
+
       </div> <!-- box-grey-->
       </div> <!--end theiaStickySidebar-->
-     
-     </div> <!--menu-right-content--> 
+
+     </div> <!--menu-right-content-->
      <?php endif;?>
-  
+
   </div> <!--row-->
 </div> <!--container-->
 </div> <!--section-menu-->

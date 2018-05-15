@@ -7,18 +7,19 @@
 <html lang="en">
 <head>
 
-<!-- IE6-8 support of HTML5 elements --> 
+<!-- IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
 <!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="theme-color" content="#058c81">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 <link rel="shortcut icon" href="<?php echo  Yii::app()->request->baseUrl; ?>/favicon.ico?ver=1.1" />
-<?php 
+<?php
 /*add the analytic codes */
 Widgets::analyticsCode();
 ?>

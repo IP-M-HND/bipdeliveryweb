@@ -168,34 +168,34 @@ class FunctionsV3
     	switch ($service) {
     		case 1:
     			$htm.='<li>'.t("A Domicilio").' <i class="green-color ion-android-checkmark-circle"></i></li>';
-    			$htm.='<li>'.t("Recojer").' <i class="green-color ion-android-checkmark-circle"></i></li>';
+    			$htm.='<li>'.t("Recoger").' <i class="green-color ion-android-checkmark-circle"></i></li>';
     			break;
 
     		case 2:
     			$htm.='<li>'.t("A Domicilio").' <i class="green-color ion-android-checkmark-circle"></i></li>';
     			break;
     		case 3:
-    			$htm.='<li>'.t("Recojer").' <i class="green-color ion-android-checkmark-circle"></i></li>';
+    			$htm.='<li>'.t("Recoger").' <i class="green-color ion-android-checkmark-circle"></i></li>';
     			break;
 
     		case 4:
     			$htm.='<li>'.t("A Domicilio").' <i class="green-color ion-android-checkmark-circle"></i></li>';
-    			$htm.='<li>'.t("Recojer").' <i class="green-color ion-android-checkmark-circle"></i></li>';
-    			$htm.='<li>'.t("Comer en el Restaurante").' <i class="green-color ion-android-checkmark-circle"></i></li>';
+    			$htm.='<li>'.t("Recoger").' <i class="green-color ion-android-checkmark-circle"></i></li>';
+    			$htm.='<li>'.t("Restaurante").' <i class="green-color ion-android-checkmark-circle"></i></li>';
     			break;
 
     		case 5:
     			$htm.='<li>'.t("A Domicilio").' <i class="green-color ion-android-checkmark-circle"></i></li>';
-    			$htm.='<li>'.t("Comer en el Restaurante").' <i class="green-color ion-android-checkmark-circle"></i></li>';
+    			$htm.='<li>'.t("Restaurante").' <i class="green-color ion-android-checkmark-circle"></i></li>';
     			break;
 
     	    case 6:
-    			$htm.='<li>'.t("Recojer").' <i class="green-color ion-android-checkmark-circle"></i></li>';
-    			$htm.='<li>'.t("Comer en el Restaurante").' <i class="green-color ion-android-checkmark-circle"></i></li>';
+    			$htm.='<li>'.t("Recoger").' <i class="green-color ion-android-checkmark-circle"></i></li>';
+    			$htm.='<li>'.t("Restaurante").' <i class="green-color ion-android-checkmark-circle"></i></li>';
     			break;
 
     		case 7:
-    			$htm.='<li>'.t("Comer en el Restaurante").' <i class="green-color ion-android-checkmark-circle"></i></li>';
+    			$htm.='<li>'.t("Restaurante").' <i class="green-color ion-android-checkmark-circle"></i></li>';
     			break;
 
     		default:

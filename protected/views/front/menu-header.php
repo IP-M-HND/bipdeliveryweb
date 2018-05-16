@@ -67,14 +67,14 @@ data-image-src="<?php echo empty($background)?assetsURL()."/images/b-2.jpg":uplo
 	<p><?php echo FunctionsV3::getFreeDeliveryTag($merchant_id)?></p>
 
 	<?php if ( getOption($merchant_id,'merchant_show_time')=="yes"):?>
-	<p class="small">
-	<?php echo t("Merchant Current Date/Time").": ".
+	<p class="small hidden">
+	<?php echo t("Hora y Fecha Actual").": ".
 	Yii::app()->functions->translateDate(date('F d l')." ".timeFormat(date('c'),true));?>
 	</p>
 	<?php endif;?>
 
 	<?php if (!empty($merchant_website)):?>
-	<p class="small">
+	<p class="small hidden">
 	<?php echo t("Website").": "?>
 	<a target="_blank" href="<?php echo FunctionsV3::fixedLink($merchant_website)?>">
 	  <?php echo $merchant_website;?>

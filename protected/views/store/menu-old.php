@@ -406,7 +406,7 @@ echo CHtml::hiddenField('customer_ask_address',getOptionA('customer_ask_address'
 	<li class=""><a href="#"><?php echo Yii::t("default","Photos")?></a></li>
 	<?php endif;?>
 	
-	<li><a href="#"><?php echo t("Information")?></a></li>
+	<li><a href="#"><?php echo t("informacion")?></a></li>
 	
  </ul>
   <!--TAB ENDS HERE-->

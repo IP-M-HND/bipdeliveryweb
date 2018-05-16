@@ -203,7 +203,7 @@ if ($food_viewing_private==2){
 
 		    <?php if ($theme_hours_tab==""):?>
 		    <li>
-		       <span><?php echo t("Opening Hours")?></span>
+		       <span><?php echo t("Horarios")?></span>
 		       <i class="ion-clock"></i>
 		    </li>
 		    <?php endif;?>
@@ -224,7 +224,7 @@ if ($food_viewing_private==2){
 
 		    <?php if ($booking_enabled):?>
 		      <li>
-		      <span><?php echo t("Book a Table")?></span>
+		      <span><?php echo t("Reservaciones")?></span>
 		      <i class="ion-coffee"></i>
 		      </li>
 		    <?php endif;?>
@@ -238,7 +238,7 @@ if ($food_viewing_private==2){
 
 		    <?php if ($theme_info_tab==""):?>
 		    <li>
-		      <span><?php echo t("Information")?></span>
+		      <span><?php echo t("informacion")?></span>
 		      <i class="ion-ios-information-outline"></i>
 		    </li>
 		    <?php endif;?>

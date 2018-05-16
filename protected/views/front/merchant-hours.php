@@ -4,7 +4,7 @@
 <div class="section-label bottom20">
     <a class="section-label-a">
       <span class="bold" style="background:#fff;">
-      <?php echo t("Opening Hours")?></span>
+      <?php echo t("Horarios")?></span>
       <b></b>
     </a>     
 </div>  

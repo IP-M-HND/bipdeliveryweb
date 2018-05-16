@@ -5,21 +5,21 @@
 <?php echo CHtml::hiddenField('action','bookATable')?>
 <?php echo CHtml::hiddenField('currentController','store')?>
 <?php echo CHtml::hiddenField('merchant-id',$merchant_id)?>
-	     
+
 <div class="section-label">
     <a class="section-label-a">
       <span class="bold" style="background:#fff;">
-      <?php echo t("Booking Information")?></span>
+      <?php echo t("Informacion")?></span>
       <b></b>
-    </a>     
-</div>  
+    </a>
+</div>
 
 <div class="row top10">
    <div class="col-md-3 ">
-     <?php echo t("Number Of Guests")?>
+     <?php echo t("Numero de invitados")?>
    </div>
    <div class="col-md-3 ">
-	 <?php echo CHtml::textField('number_guest',''			 
+	 <?php echo CHtml::textField('number_guest',''
 	  ,array(
 	  'class'=>'numeric_only grey-inputs',
 	  'required'=>true
@@ -29,11 +29,11 @@
 
 <div class="row top10">
    <div class="col-md-3 ">
-     <?php echo t("Date Of Booking")?>
+     <?php echo t("Fecha")?>
    </div>
    <div class="col-md-3 ">
 	 <?php echo CHtml::hiddenField('date_booking')?>
-	  <?php echo CHtml::textField('date_booking1',''			 
+	  <?php echo CHtml::textField('date_booking1',''
 	  ,array(
 	  'class'=>'date_booking grey-inputs',
 	  'required'=>true,
@@ -47,7 +47,7 @@
      <?php echo t("Time")?>
    </div>
    <div class="col-md-3 ">
-	 <?php echo CHtml::textField('booking_time',''			 
+	 <?php echo CHtml::textField('booking_time',''
 	  ,array(
 	  'class'=>'grey-inputs',
 	  'required'=>true,
@@ -58,12 +58,12 @@
 <div class="section-label">
     <a class="section-label-a">
       <span class="bold" style="background:#fff;">
-      <?php echo t("Contact Information")?></span>
+      <?php echo t("Su Informacion")?></span>
       <b></b>
-    </a>     
-</div>  
+    </a>
+</div>
 
-<?php 
+<?php
 $booking_name=''; $email=''; $mobile='';
 if ( Yii::app()->functions->isClientLogin()){
 	$booking_name=Yii::app()->functions->getClientName() ." ".$_SESSION['kr_client']['last_name'];
@@ -77,7 +77,7 @@ if ( Yii::app()->functions->isClientLogin()){
      <?php echo t("Name")?>
    </div>
    <div class="col-md-6 ">
-	  <?php echo CHtml::textField('booking_name',$booking_name			 
+	  <?php echo CHtml::textField('booking_name',$booking_name
 	  ,array(
 	  'class'=>'grey-inputs',
 	  'required'=>true,
@@ -90,7 +90,7 @@ if ( Yii::app()->functions->isClientLogin()){
      <?php echo t("Email")?>
    </div>
    <div class="col-md-6 ">
-	  <?php echo CHtml::textField('email',$email			 
+	  <?php echo CHtml::textField('email',$email
 	  ,array(
 	  'class'=>'grey-inputs',
 	  'required'=>true,
@@ -113,20 +113,20 @@ if ( Yii::app()->functions->isClientLogin()){
 
 <div class="row top10">
    <div class="col-md-3 ">
-     <?php echo t("Your Instructions")?>
+     <?php echo t("Instrucciones Adicionales")?>
    </div>
    <div class="col-md-6 ">
-	  <?php echo CHtml::textArea('booking_notes',''			 
+	  <?php echo CHtml::textArea('booking_notes',''
 	  ,array(
-	  'class'=>'grey-inputs'			 
+	  'class'=>'grey-inputs'
 	  ))?>
    </div>
 </div> <!--row-->
 
-<div class="row top10">  
+<div class="row top10">
   <div class="col-md-3 "></div>
   <div class="col-md-6 text-left ">
-  <input type="submit" value="<?php echo t("Book a Table")?>" class="rounded book-table-button green-button inline">
+  <input type="submit" value="<?php echo t("Reservaciones")?>" class="rounded book-table-button green-button inline">
   </div>
 </div><!-- row-->
 

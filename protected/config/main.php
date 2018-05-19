@@ -15,7 +15,7 @@ $patern.="|voguepaynotify|voguepaysuccess|voguepayfailed|voginit|vognotify|vogin
 $patern=strtolower($patern);
 
 return array(
-	'name'=>'Karinderia Multiple Restaurant',
+	'name'=>'Bip Delivery Web',
 
 	'defaultController'=>'store',
 
@@ -102,13 +102,16 @@ return array(
 		// }
 		//test xampp
 
-		// base de datos externa: 173.194.110.34, password delivery18
+		// base de datos externa: host=mysql.hostinger.es,
+		// nombre base de datos u169589070_krdia,
+		// usuario u169589070_root,
+		// password delivery18
 		'db'=>array(
 			'class'            => 'CDbConnection' ,
-		'connectionString' => 'mysql:host=173.194.110.34;dbname=karenderia',
+		'connectionString' => 'mysql:host=mysql.hostinger.es;dbname=u169589070_krdia',
 		'emulatePrepare'   => true,
-		'username'         => 'root',
-		'password'         => 'delivery18',
+		'username'         => 'u169589070_root',
+		'password'         => 'Delivery18#',
 		'charset'          => 'utf8',
 		'tablePrefix'      => 'mt_',
 		),

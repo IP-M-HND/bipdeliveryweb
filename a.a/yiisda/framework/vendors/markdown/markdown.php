@@ -1450,7 +1450,7 @@ class Markdown_Parser {
 	public function _initDetab() {
 	#
 	# Check for the availability of the function in the `utf8_strlen` property
-	# (initially `mb_strlen`). If the function is not available, create a
+	# (initially `mb_strlen`). If the function is No disponible ahora, create a
 	# function that will loosely count the number of UTF-8 characters with a
 	# regular expression.
 	#

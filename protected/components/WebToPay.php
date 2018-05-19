@@ -1858,7 +1858,7 @@ class WebToPay_PaymentMethodListProvider {
      * @param WebToPay_WebClient $webClient
      * @param WebToPay_UrlBuilder $urlBuilder
      *
-     * @throws WebToPayException if SimpleXML is not available
+     * @throws WebToPayException if SimpleXML is No disponible ahora
      */
     public function __construct(
         $projectId,

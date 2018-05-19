@@ -1576,7 +1576,7 @@ jQuery(document).ready(function() {
     /*contact map*/
     if ( $("#map_latitude").length>=1 ){
     	if (typeof $("#map_latitude").val() === "undefined" || $("#map_longitude").val()==null  ) {  
-   	  	 	$("#google_map_wrap").html("<p class=\"uk-text-muted\">Map not available</p>");
+   	  	 	$("#google_map_wrap").html("<p class=\"uk-text-muted\">Map No disponible ahora</p>");
    	  	 	return;
    	  	 }	
          locations=[[$("#map_title").val(),$("#map_latitude").val(),$("#map_longitude").val(),16]];         

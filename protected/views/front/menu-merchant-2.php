@@ -75,7 +75,7 @@ if ( $val_item['single_item']==2){
 <?php endforeach;?>
 <?php else :?>
 <div class="col-md-6 border">
-<p class="small text-danger"><?php echo t("no item found on this category")?></p>
+<p class="small text-danger"><?php echo t("Ningun articulo fue encontrado en esta categoria")?></p>
 </div>
 <?php endif;?>
 

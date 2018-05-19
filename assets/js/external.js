@@ -384,7 +384,7 @@ jQuery(document).ready(function() {
    	  	  	  minimum=0;
    	  	  }   	     	  	  
    	  	  if ( minimum>subtotal){   	  	  	
-              alert('Sorry but Minimum order is'+" "+ $("#minimum_order_pretty").val());
+              alert('Sorry but Orden minima is'+" "+ $("#minimum_order_pretty").val());
    	  	  	  return;
    	  	  }      	  	  
    	  	  
@@ -446,7 +446,7 @@ jQuery(document).ready(function() {
    	  	  	  minimum=0;
    	  	  }   	     	  	  
    	  	  if ( minimum>subtotal){   	  	  	
-              alert('Sorry but Minimum order is'+" "+ $("#minimum_order_pretty").val());
+              alert('Sorry but Orden minima is'+" "+ $("#minimum_order_pretty").val());
    	  	  	  return;
    	  	  }      	  	  
    	   }  

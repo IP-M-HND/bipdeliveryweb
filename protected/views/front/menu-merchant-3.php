@@ -81,7 +81,7 @@ data-category_id="<?php echo $val['category_id']?>"
 
 <?php endforeach;?>
 <?php else :?>
-<p class="small text-danger"><?php echo t("no item found on this category")?></p>
+<p class="small text-danger"><?php echo t("Ningun articulo fue encontrado en esta categoria")?></p>
 <?php endif;?>
 
 </div><!-- menu-3-cat-->

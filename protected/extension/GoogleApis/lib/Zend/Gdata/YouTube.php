@@ -724,7 +724,7 @@ class Zend_Gdata_YouTube extends Zend_Gdata_Media
         if ($this->getMajorProtocolVersion() == 1) {
             require_once 'Zend/Gdata/App/VersionException.php';
             throw new Zend_Gdata_App_VersionException('User activity feeds ' .
-                'are not available in API version 1.');
+                'are No disponible ahora in API version 1.');
         }
 
         $uri = null;

@@ -262,7 +262,7 @@ $merchant_longtitude=Yii::app()->functions->getOption("merchant_longtitude",$mer
 <li> <!--membership status-->  
   <div class="uk-form-row">
   <label class="uk-form-label"><?php echo Yii::t("default","Package Name")?></label>
-  <span class="uk-text-bold"><?php echo isset($data['package_name'])?ucwords($data['package_name']):"Not Available";?></span>
+  <span class="uk-text-bold"><?php echo isset($data['package_name'])?ucwords($data['package_name']):"No disponible ahora";?></span>
   </div>
   
   <div class="uk-form-row">
@@ -278,7 +278,7 @@ $merchant_longtitude=Yii::app()->functions->getOption("merchant_longtitude",$mer
    echo $date=Yii::app()->functions->translateDate($date);
    ?>
    <?php else :?>
-   <p>Not Available</p>
+   <p>No disponible ahora</p>
    <?php endif;?>
    </span>
   </div>  

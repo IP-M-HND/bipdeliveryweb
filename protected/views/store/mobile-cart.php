@@ -40,7 +40,7 @@ echo CHtml::hiddenField('customer_ask_address',getOptionA('customer_ask_address'
 echo CHtml::hiddenField('merchant_required_delivery_time',
   Yii::app()->functions->getOption("merchant_required_delivery_time",$merchant_id));   
   
-/** add minimum order for pickup status*/
+/** add Orden minima for pickup status*/
 $merchant_minimum_order_pickup=Yii::app()->functions->getOption('merchant_minimum_order_pickup',$merchant_id);
 if (!empty($merchant_minimum_order_pickup)){
 	  echo CHtml::hiddenField('merchant_minimum_order_pickup',$merchant_minimum_order_pickup);

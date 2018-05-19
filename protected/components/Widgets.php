@@ -252,7 +252,7 @@ class Widgets extends CApplicationComponent
 		        $open_ends='';
 		        $open_text='';
 			}
-		} else $tip.="<li>".Yii::t("default","Not available.")."</li>";
+		} else $tip.="<li>".Yii::t("default","No disponible ahora.")."</li>";
 		$tip.="<div class=\"clear\"></div>";
 		$tip.="</ul>";
 
@@ -1086,7 +1086,7 @@ class Widgets extends CApplicationComponent
 		    <a href="<?php echo uploadURL()."/".$val?>" title=""><img src="<?php echo uploadURL()."/".$val?>"></a>
 		    <?php endforeach;?>
 		 <?php else :?>
-		 <p class="uk-text-danger"><?php echo t("gallery not available")?></p>
+		 <p class="uk-text-danger"><?php echo t("Galeria no disponible actualmente")?></p>
 		 <?php endif;?>
 		</div> <!--merchant-gallery-wrap-->
 		<div class="clear"></div>
@@ -1281,7 +1281,7 @@ class Widgets extends CApplicationComponent
 		        </div>
 		        <p><?php echo qTranslate($item['item_description'],'item_description',$item)?></p>
 		        <?php if ($item['not_available']==2):?>
-		        <p class="uk-text-danger"><?php echo t("This item is not available")?></p>
+		        <p class="uk-text-danger"><?php echo t("This item is No disponible ahora")?></p>
 		        <?php endif;?>
 
 		        <?php

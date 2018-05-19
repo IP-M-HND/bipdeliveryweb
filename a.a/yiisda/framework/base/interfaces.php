@@ -499,7 +499,7 @@ interface IAuthManager
  * IBehavior interfaces is implemented by all behavior classes.
  *
  * A behavior is a way to enhance a component with additional methods that
- * are defined in the behavior class and not available in the component class.
+ * are defined in the behavior class and No disponible ahora in the component class.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @package system.base

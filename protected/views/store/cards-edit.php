@@ -75,7 +75,7 @@
      </div> 
   
   <?php else :?>
-  <p class="uk-text-danger"><?php echo Yii::t("default","Card not available")?></p>
+  <p class="uk-text-danger"><?php echo Yii::t("default","Card No disponible ahora")?></p>
   <?php endif;?>  
   </form>
     

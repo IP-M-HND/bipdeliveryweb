@@ -46,7 +46,7 @@ $this->renderPartial('/front/default-header',array(
 					   'list'=>$list,
 					   'tabs'=>$tabs
 					));
-	            } else echo '<p class="text-danger">'.t("No restaurant found").'</p>';
+	            } else echo '<p class="text-danger">'.t("Ningun eestaurante encontrado").'</p>';
             endif;
             ?>
           </li>
@@ -58,7 +58,7 @@ $this->renderPartial('/front/default-header',array(
 					   'list'=>$list,
 					   'tabs'=>$tabs
 					));
-	            } else echo '<p class="text-danger">'.t("No restaurant found").'</p>';
+	            } else echo '<p class="text-danger">'.t("Ningun eestaurante encontrado").'</p>';
             endif;
             ?>
           </li>
@@ -71,7 +71,7 @@ $this->renderPartial('/front/default-header',array(
 					   'list'=>$list,
 					   'tabs'=>$tabs
 					));
-	            } else echo '<p class="text-danger">'.t("No restaurant found").'</p>';
+	            } else echo '<p class="text-danger">'.t("Ningun eestaurante encontrado").'</p>';
             endif;
             ?>
 

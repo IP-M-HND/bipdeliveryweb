@@ -389,11 +389,11 @@ class Functions extends CApplicationComponent
     	  "trans_2"=>Yii::t("default","Sorry but you can select only"),
     	  "trans_3"=>Yii::t("default","addon"),
     	  "trans_4"=>Yii::t("default","Are you sure?"),
-    	  "trans_5"=>Yii::t("default","Sorry but Minimum order is"),
+    	  "trans_5"=>Yii::t("default","Sorry but Orden minima is"),
     	  "trans_6"=>Yii::t("default","Please select payment method"),
     	  "trans_7"=>Yii::t("default","Mobile number is required"),
     	  "trans_8"=>Yii::t("default","Please select your credit card"),
-    	  "trans_9"=>Yii::t("default","Map not available"),
+    	  "trans_9"=>Yii::t("default","Map No disponible ahora"),
     	  "trans_10"=>Yii::t("default","Are you sure you want to delete this review? This action cannot be undone."),
     	  "trans_11"=>Yii::t("default","Add your recent order to cart?"),
     	  "trans_12"=>Yii::t("default","Got a total of _TOTAL_ Merchant to show (_START_ to _END_)"),
@@ -480,7 +480,7 @@ class Functions extends CApplicationComponent
     	  'trans_48'=>t("Please drag the marker to select your address"),
     	  'trans_49'=>t("You can drag the map marker"),
     	  'trans_50'=>t("Is this address correct"),
-    	  'trans_51'=>t("Sorry but this item is not available"),
+    	  'trans_51'=>t("Sorry but this item is No disponible ahora"),
     	  'trans_52'=>t("Please validate Captcha"),
     	  'trans_53'=>t("SMS code is required"),
     	      	  
@@ -1047,7 +1047,7 @@ class Functions extends CApplicationComponent
                 array('visible'=>$this->hasMerchantAccess("shippingrate"),'tag'=>"shippingrate",'label'=>'<i class="fa fa-list-alt"></i>'.Yii::t("default","Delivery Charges Rates"),
                 'url'=>array('/merchant/shippingrate')),
                 
-                array('visible'=>$this->hasMerchantAccess("mintable"),'tag'=>"mintable",'label'=>'<i class="fa fa-list-alt"></i>'.Yii::t("default","Minimum Order Table"),
+                array('visible'=>$this->hasMerchantAccess("mintable"),'tag'=>"mintable",'label'=>'<i class="fa fa-list-alt"></i>'.Yii::t("default","Orden minima Table"),
                 'url'=>array('/merchant/mintable')),
                 
                 array('visible'=>$this->hasMerchantAccess("offers"),'tag'=>"offers",'label'=>'<i class="fa fa-list-alt"></i>'.Yii::t("default","Offers"),

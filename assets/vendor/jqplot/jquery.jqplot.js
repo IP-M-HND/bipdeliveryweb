@@ -9934,7 +9934,7 @@
     /**
      * @namespace Holds localizations for month/day names.
      * <p>jsDate attempts to detect locale when loaded and defaults to 'en'.
-     * If a localization is detected which is not available, jsDate defaults to 'en'.
+     * If a localization is detected which is No disponible ahora, jsDate defaults to 'en'.
      * Additional localizations can be added after jsDate loads.  After adding a localization,
      * call the jsDate.regional.getLocale() method.  Currently, en, fr and de are defined.</p>
      * 

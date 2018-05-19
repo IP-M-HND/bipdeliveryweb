@@ -214,7 +214,7 @@ $merchant_info=(array)Yii::app()->functions->getMerchantInfo();
   
 <h2><?php echo t("Food Item Options")?></h2>
 
-<h5><?php echo t("If item is not available do the following actions")?></h5>
+<h5><?php echo t("If item is No disponible ahora do the following actions")?></h5>
 <div class="uk-form-row">
   <label class="uk-form-label"><?php echo Yii::t("default","Hide")?></label>  
   <?php 
@@ -454,7 +454,7 @@ echo CHtml::textField('merchant_extenal',$merchant_extenal,array(
 
 
 
-<h3><?php echo Yii::t("default","Minimum Order")?> <?php echo t("Delivery")?></h3>
+<h3><?php echo Yii::t("default","Orden minima")?> <?php echo t("Delivery")?></h3>
 
 <div class="uk-form-row">
   <label class="uk-form-label"><?php echo Yii::t("default","Minimum purchase amount.")?></label>
@@ -480,7 +480,7 @@ echo CHtml::textField('merchant_extenal',$merchant_extenal,array(
   <?php echo Yii::app()->functions->getCurrencyCode(Yii::app()->functions->getMerchantID());?>
 </div>
 
-<h3><?php echo Yii::t("default","Minimum Order")?> <?php echo t("Pickup")?></h3>
+<h3><?php echo Yii::t("default","Orden minima")?> <?php echo t("Pickup")?></h3>
 
 <div class="uk-form-row">
   <label class="uk-form-label"><?php echo Yii::t("default","Minimum purchase amount.")?></label>

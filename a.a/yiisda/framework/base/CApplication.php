@@ -681,7 +681,7 @@ abstract class CApplication extends CModule
 	/**
 	 * Loads the global state data from persistent storage.
 	 * @see getStatePersister
-	 * @throws CException if the state persister is not available
+	 * @throws CException if the state persister is No disponible ahora
 	 */
 	public function loadGlobalState()
 	{
@@ -695,7 +695,7 @@ abstract class CApplication extends CModule
 	/**
 	 * Saves the global state data into persistent storage.
 	 * @see getStatePersister
-	 * @throws CException if the state persister is not available
+	 * @throws CException if the state persister is No disponible ahora
 	 */
 	public function saveGlobalState()
 	{

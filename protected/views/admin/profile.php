@@ -65,7 +65,7 @@ $p = new CHtmlPurifier();
 </div>
 
 <?php else :?>
-<p class="uk-text-danger"><?php echo Yii::t("default","Profile not available")?></p>
+<p class="uk-text-danger"><?php echo Yii::t("default","Profile No disponible ahora")?></p>
 <?php endif;?>
 
 </form>

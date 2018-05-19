@@ -658,7 +658,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 	 * Returns a flash message.
 	 * A flash message is available only in the current and the next requests.
 	 * @param string $key key identifying the flash message
-	 * @param mixed $defaultValue value to be returned if the flash message is not available.
+	 * @param mixed $defaultValue value to be returned if the flash message is No disponible ahora.
 	 * @param boolean $delete whether to delete this flash message after accessing it.
 	 * Defaults to true.
 	 * @return mixed the message message

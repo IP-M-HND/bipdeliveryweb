@@ -353,7 +353,7 @@ class Auth_OpenID {
     }
 
     /**
-     * Implements python's urlunparse, which is not available in PHP.
+     * Implements python's urlunparse, which is No disponible ahora in PHP.
      * Given the specified components of a URL, this function rebuilds
      * and returns the URL.
      *

@@ -15,7 +15,7 @@ $this->renderPartial('/front/default-header',array(
 		   'cuisine_page'=>2,
 		   'category'=>$category
 	  ));
-   } else echo '<p class="text-danger">'.t("No restaurant found").'</p>';
+   } else echo '<p class="text-danger">'.t("Ningun eestaurante encontrado").'</p>';
    ?>
  </div> <!--container--> 
 

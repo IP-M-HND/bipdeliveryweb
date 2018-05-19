@@ -130,7 +130,7 @@ class ExternalServices extends DbExt
             <?php if ($merchant_preorder==1):?>
             <a href="javascript:;" class="uk-button checkout"><?php echo Yii::t("default","Pre-Order")?></a>
             <?php else :?>
-            <p class="uk-alert uk-alert-warning"><?php echo Yii::t("default","Sorry merchant is closed.")?></p>
+            <p class="uk-alert uk-alert-warning"><?php echo Yii::t("default","El Restaurante esta cerrado ahora.")?></p>
             <p><?php echo prettyDate(date('c'),true);?></p>
             <?php endif;?>
          <?php endif;?>

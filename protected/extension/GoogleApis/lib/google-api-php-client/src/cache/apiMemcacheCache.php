@@ -29,7 +29,7 @@ class apiMemcacheCache extends apiCache {
   public function __construct() {
     global $apiConfig;
     if (! function_exists('memcache_connect')) {
-      throw new apiCacheException("Memcache functions not available");
+      throw new apiCacheException("Memcache functions No disponible ahora");
     }
     $this->host = $apiConfig['ioMemCacheCache_host'];
     $this->port = $apiConfig['ioMemCacheCache_port'];

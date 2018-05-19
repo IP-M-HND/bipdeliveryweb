@@ -12,5 +12,5 @@ elseif(in_array($file->type,array('txt','js','css','sql')))
 	echo '</div>';
 }
 else
-	echo '<div class="error">Preview is not available for this file type.</div>';
+	echo '<div class="error">Preview is No disponible ahora for this file type.</div>';
 ?>

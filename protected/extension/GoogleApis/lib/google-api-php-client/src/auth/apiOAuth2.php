@@ -195,7 +195,7 @@ class apiOAuth2 extends apiAuth {
     if ($expired) {
       if (! array_key_exists('refresh_token', $this->accessToken)) {
         throw new apiAuthException("The OAuth 2.0 access token has expired, "
-            . "and a refresh token is not available. Refresh tokens are not "
+            . "and a refresh token is No disponible ahora. Refresh tokens are not "
             . "returned for responses that were auto-approved.");
       }
       $this->refreshToken($this->accessToken['refresh_token']);

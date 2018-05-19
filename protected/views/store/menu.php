@@ -12,7 +12,7 @@ if ( !file_exists(FunctionsV3::uploadPath()."/$merchant_photo_bg")){
 
 /*RENDER MENU HEADER FILE*/
 
-/*GET MINIMUM ORDER*/
+/*GET Orden minima*/
 
 $min_fees=FunctionsV3::getMinOrderByTableRates($merchant_id,
    $distance,
@@ -84,7 +84,7 @@ echo CHtml::hiddenField('customer_ask_address',getOptionA('customer_ask_address'
 echo CHtml::hiddenField('merchant_required_delivery_time',
   Yii::app()->functions->getOption("merchant_required_delivery_time",$merchant_id));
 
-/** add minimum order for pickup status*/
+/** add Orden minima for pickup status*/
 $merchant_minimum_order_pickup=Yii::app()->functions->getOption('merchant_minimum_order_pickup',$merchant_id);
 if (!empty($merchant_minimum_order_pickup)){
 	  echo CHtml::hiddenField('merchant_minimum_order_pickup',$merchant_minimum_order_pickup);
@@ -456,7 +456,7 @@ if ($food_viewing_private==2){
 	        if(!$search_by_location){
 		        if ($distance){
 		        	echo t("Distance").": ".number_format($distance,1)." $distance_type";
-		        } else echo  t("Distance").": ".t("not available");
+		        } else echo  t("Distance").": ".t("No disponible ahora");
 	        }
 	        ?>
 	        </p>
@@ -469,7 +469,7 @@ if ($food_viewing_private==2){
 	        if(!$search_by_location){
 		        if (!empty($merchant_delivery_distance)){
 		        	echo t("Delivery Distance Covered").": ".$merchant_delivery_distance." $distance_type_orig";
-		        } else echo  t("Delivery Distance Covered").": ".t("not available");
+		        } else echo  t("Delivery Distance Covered").": ".t("No disponible ahora");
 	        }
 	        ?>
 	        </p>

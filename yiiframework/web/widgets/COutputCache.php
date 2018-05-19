@@ -28,7 +28,7 @@
  * </pre>
  *
  * COutputCache must work with a cache application component specified via {@link cacheID}.
- * If the cache application component is not available, COutputCache will be disabled.
+ * If the cache application component is No disponible ahora, COutputCache will be disabled.
  *
  * The validity of the cached content is determined based on two factors:
  * the {@link duration} and the cache {@link dependency}.

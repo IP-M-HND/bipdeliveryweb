@@ -936,7 +936,7 @@ class StoreController extends CController
 		    ));
 
 		} else $this->render('error',array(
-		  'message'=>t("merchant is not available")
+		  'message'=>t("merchant is No disponible ahora")
 		));
 	}
 

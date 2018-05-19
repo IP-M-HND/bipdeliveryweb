@@ -642,7 +642,7 @@ class Zend_Gdata_YouTube_VideoEntry extends Zend_Gdata_YouTube_MediaEntry
 
     /**
      * Gets the title of the video as a string.  null is returned
-     * if the video title is not available.
+     * if the video title is No disponible ahora.
      *
      * @return string|null The title of the video
      */
@@ -687,7 +687,7 @@ class Zend_Gdata_YouTube_VideoEntry extends Zend_Gdata_YouTube_MediaEntry
 
     /**
      * Gets the description  of the video as a string.  null is returned
-     * if the video description is not available.
+     * if the video description is No disponible ahora.
      *
      * @return string|null The description of the video
      */
@@ -703,7 +703,7 @@ class Zend_Gdata_YouTube_VideoEntry extends Zend_Gdata_YouTube_MediaEntry
 
     /**
      * Gets the URL of the YouTube video watch page.  null is returned
-     * if the video watch page URL is not available.
+     * if the video watch page URL is No disponible ahora.
      *
      * @return string|null The URL of the YouTube video watch page
      */
@@ -751,7 +751,7 @@ class Zend_Gdata_YouTube_VideoEntry extends Zend_Gdata_YouTube_MediaEntry
 
     /**
      * Gets the URL of the flash player SWF.  null is returned if the
-     * duration value is not available.
+     * duration value is No disponible ahora.
      *
      * @return string|null The URL of the flash player SWF
      */
@@ -768,7 +768,7 @@ class Zend_Gdata_YouTube_VideoEntry extends Zend_Gdata_YouTube_MediaEntry
 
     /**
      * Gets the duration of the video, in seconds.  null is returned
-     * if the duration value is not available.
+     * if the duration value is No disponible ahora.
      *
      * @return string|null The duration of the video, in seconds.
      */
@@ -863,7 +863,7 @@ class Zend_Gdata_YouTube_VideoEntry extends Zend_Gdata_YouTube_MediaEntry
 
     /**
      * Gets the number of views for this video.  null is returned if the
-     * number of views is not available.
+     * number of views is No disponible ahora.
      *
      * @return string|null The number of views for this video
      */
@@ -879,7 +879,7 @@ class Zend_Gdata_YouTube_VideoEntry extends Zend_Gdata_YouTube_MediaEntry
     /**
      * Gets the location specified for this video, if available.  The location
      * is returned as an array containing the keys 'longitude' and 'latitude'.
-     * null is returned if the location is not available.
+     * null is returned if the location is No disponible ahora.
      *
      * @return array|null The location specified for this video
      */
@@ -907,7 +907,7 @@ class Zend_Gdata_YouTube_VideoEntry extends Zend_Gdata_YouTube_MediaEntry
     /**
      * Gets the rating information for this video, if available.  The rating
      * is returned as an array containing the keys 'average' and 'numRaters'.
-     * null is returned if the rating information is not available.
+     * null is returned if the rating information is No disponible ahora.
      *
      * @return array|null The rating information for this video
      */

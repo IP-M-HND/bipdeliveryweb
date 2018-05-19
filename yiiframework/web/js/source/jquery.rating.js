@@ -183,7 +183,7 @@
 			// attach reference to star to input element and vice-versa
 			star.data('rating.input', input.data('rating.star', star));
 			
-			// store control information in form (or body when form not available)
+			// store control information in form (or body when form No disponible ahora)
 			control.stars[control.stars.length] = star[0];
 			control.inputs[control.inputs.length] = input[0];
 			control.rater = raters[eid] = rater;
@@ -351,7 +351,7 @@
 			split: 0,                  // split the star into how many parts?
 			
 			// Width of star image in case the plugin can't work it out. This can happen if
-			// the jQuery.dimensions plugin is not available OR the image is hidden at installation
+			// the jQuery.dimensions plugin is No disponible ahora OR the image is hidden at installation
 			starWidth: 16//,
 			
 			//NB.: These don't need to be pre-defined (can be undefined/null) so let's save some code!

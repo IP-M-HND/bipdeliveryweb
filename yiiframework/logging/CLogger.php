@@ -227,7 +227,7 @@ class CLogger extends CComponent
 	/**
 	 * Returns the memory usage of the current application.
 	 * This method relies on the PHP function memory_get_usage().
-	 * If it is not available, the method will attempt to use OS programs
+	 * If it is No disponible ahora, the method will attempt to use OS programs
 	 * to determine the memory usage. A value 0 will be returned if the
 	 * memory usage can still not be determined.
 	 * @return integer memory usage of the application (in bytes).

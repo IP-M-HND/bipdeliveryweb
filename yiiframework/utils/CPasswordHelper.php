@@ -87,7 +87,7 @@ class CPasswordHelper
 	 * hash takes 1 second to compute when $cost is 14 then then the compute time varies as
 	 * 2^($cost - 14) seconds.
 	 * @return string The password hash string, always 60 ASCII characters.
-	 * @throws CException on bad password parameter or if crypt() with Blowfish hash is not available.
+	 * @throws CException on bad password parameter or if crypt() with Blowfish hash is No disponible ahora.
 	 */
 	public static function hashPassword($password,$cost=13)
 	{
@@ -107,7 +107,7 @@ class CPasswordHelper
 	 * @param string $password The password to verify. If password is empty or not a string, method will return false.
 	 * @param string $hash The hash to verify the password against.
 	 * @return bool True if the password matches the hash.
-	 * @throws CException on bad password or hash parameters or if crypt() with Blowfish hash is not available.
+	 * @throws CException on bad password or hash parameters or if crypt() with Blowfish hash is No disponible ahora.
 	 */
 	public static function verifyPassword($password, $hash)
 	{

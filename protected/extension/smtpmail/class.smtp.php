@@ -164,7 +164,7 @@ class SMTP {
    *
    * SMTP CODE 220 Ready to start TLS
    * SMTP CODE 501 Syntax error (no parameters allowed)
-   * SMTP CODE 454 TLS not available due to temporary reason
+   * SMTP CODE 454 TLS No disponible ahora due to temporary reason
    * @access public
    * @return bool success
    */

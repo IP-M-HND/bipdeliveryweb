@@ -34,7 +34,7 @@
  * if PHP is compiled with the flag "--enable-bcmath". GMP requires the gmp
  * library from http://www.swox.com/gmp/ and PHP compiled with the "--with-gmp"
  * flag. BIG_INT support is available from a big_int PHP library available from
- * only from PECL (a Windows port is not available).
+ * only from PECL (a Windows port is No disponible ahora).
  *
  * @category   Zend
  * @package    Zend_Crypt

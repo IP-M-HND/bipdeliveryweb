@@ -9,7 +9,7 @@
 	<?php endforeach;?>	  
 	</div>
  <?php else :?>
-  <p class="text-danger"><?php echo t("gallery not available")?></p>
+  <p class="text-danger"><?php echo t("Galeria no disponible actualmente")?></p>
  <?php endif;?>
  
 </div> <!--box-grey-->

@@ -3461,7 +3461,7 @@ $params['cart_tip_value']=$raw['total']['tips'];
 			if ($ratings=Yii::app()->functions->getRatings($this->data['merchant_id'])){
 				$this->code=1;
 				$this->details=$ratings;
-			} else $this->msg=Yii::t("default","Ratings not available.");    			
+			} else $this->msg=Yii::t("default","Ratings No disponible ahora.");    			
 	    }	
 	    
         public function addReviews()
@@ -3802,7 +3802,7 @@ $params['cart_tip_value']=$raw['total']['tips'];
 	    			  'restaurant_slug'=>$res['restaurant_slug'],
 	    			  'merchant_id'=>$res['merchant_id'],
 	    			);
-	    		} else $this->msg=t("Order details not available");
+	    		} else $this->msg=t("Order details No disponible ahora");
 	    	} else $this->msg=Yii::t("default","Missing Order id");
 	    }	
 	    

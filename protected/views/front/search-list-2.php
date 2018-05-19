@@ -46,8 +46,8 @@ if($val['service']==1 || $val['service']==2  || $val['service']==4  || $val['ser
 	         </div>
 	         
 	         <div class="mycol">
-	          <!--<p><?php echo t("Minimum Order").": ".FunctionsV3::prettyPrice($val['minimum_order'])?></p>-->
-	          <p><?php echo t("Minimum Order").": ".FunctionsV3::prettyPrice($min_fees)?></p>
+	          <!--<p><?php echo t("Orden minima").": ".FunctionsV3::prettyPrice($val['minimum_order'])?></p>-->
+	          <p><?php echo t("Orden minima").": ".FunctionsV3::prettyPrice($min_fees)?></p>
 	         </div>
 	         
 	       </div> <!--mytable-->
@@ -64,7 +64,7 @@ if($val['service']==1 || $val['service']==2  || $val['service']==4  || $val['ser
 	        if(!$search_by_location){
 		        if ($distance){
 		        	echo t("Distance").": ".number_format($distance,1)." $distance_type";
-		        } else echo  t("Distance").": ".t("not available");
+		        } else echo  t("Distance").": ".t("No disponible ahora");
 	        }
 	        ?>
 	        </p>
@@ -80,7 +80,7 @@ if($val['service']==1 || $val['service']==2  || $val['service']==4  || $val['ser
 	        if($show_delivery_info){
 		        if (!empty($merchant_delivery_distance)){
 		        	echo t("Delivery Distance").": ".$merchant_delivery_distance." $distance_type_orig";
-		        } else echo  t("Delivery Distance").": ".t("not available");
+		        } else echo  t("Delivery Distance").": ".t("No disponible ahora");
 	        }
 	        ?>
 	        </p>

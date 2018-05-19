@@ -985,7 +985,7 @@ class MerchantController extends CController
 				$this->render('withdrawals');
 			}
 		} else {
-			$this->render('error',array('message'=>t("Sorry but withdrawals is not available this time. admin has not yet set any payment method")));
+			$this->render('error',array('message'=>t("Sorry but withdrawals is No disponible ahora this time. admin has not yet set any payment method")));
 		}
 	}
 	
@@ -1366,7 +1366,7 @@ header('Location: '.Yii::app()->request->baseUrl."/merchant/smsReceipt/id/".Yii:
 
 	public function actionMinTable()
 	{
-		$this->crumbsTitle=t("Minimum Order Table");
+		$this->crumbsTitle=t("Orden minima Table");
 		$mtid=Yii::app()->functions->getMerchantID();
 		$this->render('min-table-rates',array(
 		  'mtid'=>$mtid,
@@ -1625,7 +1625,7 @@ header('Location: '.Yii::app()->request->baseUrl."/merchant/smsReceipt/id/".Yii:
 	{
 		$this->crumbsTitle=t("razorpay");
 		$this->render('error',array(
-		  'message'=>t("Not available")
+		  'message'=>t("No disponible ahora")
 		));
 	}
 	
@@ -1715,7 +1715,7 @@ header('Location: '.Yii::app()->request->baseUrl."/merchant/smsReceipt/id/".Yii:
 						
 					} else $error=t("Failed cannot insert records");
 					
-				} else $error=t("Offline bank deposit template is not available");
+				} else $error=t("Offline bank deposit template is No disponible ahora");
 			} else $error=t("please correct your email address. we cannot sent bank instruction with empty merchant email address");		
 		} else $error=Yii::t("default","Failed. Cannot process payment");  	
 		

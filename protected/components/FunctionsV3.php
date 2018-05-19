@@ -751,7 +751,7 @@ class FunctionsV3
     {
     	$delivery_est=Yii::app()->functions->getOption("merchant_delivery_estimation",$merchant_id);
     	if (empty($delivery_est)){
-    		return t("not available");
+    		return t("No disponible ahora");
     	}
     	return $delivery_est;
     }
@@ -995,7 +995,7 @@ class FunctionsV3
       	   	  $holiday=1;
       	   	  $msg=getOption($merchant_id,'merchant_close_msg_holiday');
       	   	  if (empty($msg)){
-      	   	  	  $msg=t("Sorry merchant is closed");
+      	   	  	  $msg=t("El Restaurante esta cerrado ahora");
       	   	  }
       	   }
         }
@@ -1020,7 +1020,7 @@ class FunctionsV3
 	    		if ($holiday==2){
 		    		$merchant_close_msg=getOption($merchant_id,'merchant_close_msg');
 		    		if (empty($merchant_close_msg)){
-		    			$msg=t("Sorry merchant is closed.");
+		    			$msg=t("El Restaurante esta cerrado ahora.");
 		    		} else $msg=$merchant_close_msg;
 	    		}
 	    	}

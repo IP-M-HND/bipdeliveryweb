@@ -29,5 +29,5 @@
 
 </div>
 <?php else :?>
-<p>Card information not available</p>
+<p>Card information No disponible ahora</p>
 <?php endif;?>

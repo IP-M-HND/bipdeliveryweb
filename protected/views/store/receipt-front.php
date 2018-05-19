@@ -195,6 +195,6 @@
 
 <?php else :?>
 <div class="container center top30">
-  <p class="text-danger"><?php echo t("receipt not available")?></p>
+  <p class="text-danger"><?php echo t("receipt No disponible ahora")?></p>
 </div>  
 <?php endif;?>

@@ -39,7 +39,7 @@
  <th><?php echo t("Distance")?></th>
  <th><?php echo t("Units")?></th>
  <th><?php echo t("Price")?></th>
- <!--<th><?php echo t("Minimum order")?></th>-->
+ <!--<th><?php echo t("Orden minima")?></th>-->
  <th><?php echo t("Action")?></th>
 </tr>
 </thead>

@@ -27,7 +27,7 @@ class apiApcCache extends apiCache {
 
   public function __construct() {
     if (! function_exists('apc_add')) {
-      throw new apiCacheException("Apc functions not available");
+      throw new apiCacheException("Apc functions No disponible ahora");
     }
   }
 

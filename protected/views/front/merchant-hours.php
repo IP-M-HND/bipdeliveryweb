@@ -19,7 +19,7 @@
    </div>
 <?php endforeach;?>
 <?php else :?>
-<p class="text-danger"><?php echo t("Not available.")?></p>
+<p class="text-danger"><?php echo t("No disponible ahora.")?></p>
 <?php endif;?>
 
 </div> <!--box-grey-->

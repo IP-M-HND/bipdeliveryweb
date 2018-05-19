@@ -21,7 +21,7 @@
             <th width="4%"><?php echo Yii::t('default',"Categories")?></th>            
             <th width="4%"><?php echo Yii::t('default',"Price")?></th>
             <th width="4%"><?php echo Yii::t('default',"Photos")?></th>
-            <th width="4%"><?php echo Yii::t('default',"Item Not Available")?></th>
+            <th width="4%"><?php echo Yii::t('default',"Item No disponible ahora")?></th>
             <th width="4%"><?php echo Yii::t('default',"Date")?></th>
         </tr>
     </thead>

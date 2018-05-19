@@ -129,7 +129,7 @@
         this.highlightAlpha = null;
         // prop: bubbleGradients
         // True to color the bubbles with gradient fills instead of flat colors.
-        // NOT AVAILABLE IN IE due to lack of excanvas support for radial gradient fills.
+        // No disponible ahora IN IE due to lack of excanvas support for radial gradient fills.
         // will be ignored in IE.
         this.bubbleGradients = false;
         // prop: showLabels

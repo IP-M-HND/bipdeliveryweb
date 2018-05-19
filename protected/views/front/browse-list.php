@@ -63,7 +63,7 @@ if ( empty($val['latitude'])){
               <?php echo FunctionsV3::displayCuisine($val['cuisine']);?>
               </p>
 
-              <p><?php echo t("Minimum Order").": ".FunctionsV3::prettyPrice($val['minimum_order'])?></p>
+              <p><?php echo t("Orden minima").": ".FunctionsV3::prettyPrice($val['minimum_order'])?></p>
 
               <?php if($val['service']!=3):?>
               <p><?php echo t("Delivery Est")?>: <?php echo FunctionsV3::getDeliveryEstimation($merchant_id)?></p>
@@ -74,7 +74,7 @@ if ( empty($val['latitude'])){
 		        if($val['service']!=3){
 			        if (!empty($merchant_delivery_distance)){
 			        	echo t("Delivery Distance").": ".$merchant_delivery_distance." $distance_type";
-			        } else echo  t("Delivery Distance").": ".t("not available");
+			        } else echo  t("Delivery Distance").": ".t("No disponible ahora");
 		        }
 		        ?>
 		       </p>

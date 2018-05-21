@@ -89,7 +89,7 @@ class FunctionsV3
 			// $top_menu[]=array('tag'=>"Clinpays",'label'=>''.Yii::t("default","Clinpays"),
       //           'url'=>'https://clinpays.com/');
 
-			$top_menu[]=array('tag'=>"Llama",'label'=>''.Yii::t("default","<h2>Llama al 2512-4060!<h2/>"),
+			$top_menu[]=array('tag'=>"Llama",'label'=>''.Yii::t("default","<h2 id='poster' class='hovercolorpersonalizado' style='background: #00ccbc;padding: 15px;border-radius: 80px;'>Llama al 2512-4060!<h2/>"),
 									'url'=>'');
 
         $enabled_commission=getOptionA('admin_commission_enabled');

@@ -15,7 +15,7 @@ $patern.="|voguepaynotify|voguepaysuccess|voguepayfailed|voginit|vognotify|vogin
 $patern=strtolower($patern);
 
 return array(
-	'name'=>'Bip Delivery Web',
+	'name'=>'Bip Delivery',
 
 	'defaultController'=>'store',
 

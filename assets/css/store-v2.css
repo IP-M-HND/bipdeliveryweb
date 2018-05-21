@@ -68,7 +68,8 @@ padding:5px 15px;;
 .mobile-search-menu a.selected i,
 .progress-dot a.selected i
 {
-color:#f75d34;
+/*color:#f75d34;* color original*/
+color:#FF5722
 }
 
 #menu .logout-menu a:hover,

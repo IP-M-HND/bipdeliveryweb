@@ -17,7 +17,7 @@ $this->renderPartial('/front/default-header',array(
 		     <span><?php echo t("Listado de Restaurantes")?></span>
 		    </a>
 		  </li>
-		  <li class="<?php echo $tabs==2?"active":''?> noclick">
+		  <li class="<?php echo $tabs==2?"active":''?> noclick hidden">
 		    <a href="<?php echo Yii::app()->createUrl('/store/browse/?tab=2')?>">
 		    <i class="ion-pizza"></i>
 		     <span><?php echo t("Newest")?></span>

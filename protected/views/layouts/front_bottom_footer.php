@@ -33,8 +33,15 @@
 
 <div class="sections section-footer">
   <div class="container">
-      <div class="row">
-         <div class="col-md-12 " style="text-align:center;">
+    <div class="row">
+      <div class="col-xs-12 hidden-lg hidden-md hidden-sm">
+        <a href="tel:+50425124060">
+          <div class="btn-call">
+              <img src="<?php echo assetsURL()."/images/telefono.png"?>" alt="">
+          </div>
+        </a>
+      </div>
+         <div class="col-md-12 hidden-xs" style="text-align:center;">
          <?php FunctionsV3::getFooterAddress();?>
 
         <?php

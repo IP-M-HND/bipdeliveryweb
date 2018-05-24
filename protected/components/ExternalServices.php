@@ -1,5 +1,6 @@
 <?php
 if (!isset($_SESSION)) { session_start(); }
+
 class ExternalServices extends DbExt
 {
 	public $data;
@@ -129,7 +130,7 @@ class ExternalServices extends DbExt
             <?php if ($merchant_preorder==1):?>
             <a href="javascript:;" class="uk-button checkout"><?php echo Yii::t("default","Pre-Order")?></a>
             <?php else :?>
-            <p class="uk-alert uk-alert-warning"><?php echo Yii::t("default","El Restaurante esta cerrado ahora.")?></p>
+            <p class="uk-alert uk-alert-warning"><?php echo Yii::t("default","Perdon, el restaurante esta cerrado")?></p>
             <p><?php echo prettyDate(date('c'),true);?></p>
             <?php endif;?>
          <?php endif;?>
@@ -840,6 +841,8 @@ if (empty($tpl)){
 $tpl=Yii::app()->functions->smarty('receipt',$receipt,$tpl);
 $tpl=Yii::app()->functions->smarty('customer-name',$data['full_name'],$tpl);
 $tpl=Yii::app()->functions->smarty('receipt-number',Yii::app()->functions->formatOrderNumber($data['order_id']),$tpl);
+
+
 $receipt_sender=Yii::app()->functions->getOption("receipt_sender",$merchant_id);
 $receipt_subject=Yii::app()->functions->getOption("receipt_subject",$merchant_id);
 if (empty($receipt_subject)){
@@ -849,6 +852,7 @@ if (empty($receipt_sender)){
 	$receipt_sender='no-reply@'.$_SERVER['HTTP_HOST'];
 }
 $to=isset($data['email_address'])?$data['email_address']:'';
+
 if (!in_array($data['order_id'],(array)$_SESSION['kr_receipt'])){
     sendEmail($to,$receipt_sender,$receipt_subject,$tpl);
 

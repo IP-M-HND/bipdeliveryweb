@@ -1,7 +1,26 @@
 
 @media only screen and (max-width : 1024px)
 {
+.i-call{
+  background-image: url('assets/images/telefono.png');
+}
 
+.i-call:hover{
+  background-color: yellow;
+}
+
+.btn-call{
+  max-height: 50px;
+  background: #00ccbc;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+  max-width: 200px;
+  border-radius: 25px;
+  font-size: 25px;
+
+}
 .top-menu-wrapper img.logo{
 border:0px solid white;
 }

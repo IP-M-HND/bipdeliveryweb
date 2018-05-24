@@ -92,7 +92,7 @@ echo CHtml::hiddenField('from_address', FunctionsV3::getSessionAddress() );
 echo CHtml::hiddenField('merchant_close_store',getOption($merchant_id,'merchant_close_store'));
 
 echo CHtml::hiddenField('merchant_close_msg',
-isset($checkout['msg'])?$checkout['msg']:t("Sorry merchant is closed."));
+isset($checkout['msg'])?$checkout['msg']:t("El Restaurante esta cerrado ahora."));
 
 echo CHtml::hiddenField('disabled_website_ordering',getOptionA('disabled_website_ordering'));
 echo CHtml::hiddenField('web_session_id',session_id());

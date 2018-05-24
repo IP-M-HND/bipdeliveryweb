@@ -68,7 +68,7 @@ data-image-src="<?php echo empty($background)?assetsURL()."/images/b-2.jpg":uplo
 
 	<?php if ( getOption($merchant_id,'merchant_show_time')=="yes"):?>
 	<p class="small hidden">
-	<?php echo t("Hora y Fecha Actual").": ".
+	<?php echo t("Merchant Current Date/Time").": ".
 	Yii::app()->functions->translateDate(date('F d l')." ".timeFormat(date('c'),true));?>
 	</p>
 	<?php endif;?>

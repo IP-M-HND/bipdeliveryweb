@@ -4919,7 +4919,7 @@ $htm.='<div class="b uk-text-muted">'."$addon_raw_price ".qTranslate($val_subs[2
     {
     	$curr_code=$this->getOptionAdmin("admin_currency_set");
     	if (empty($curr_code)){
-    		$curr_code="USD";
+    		$curr_code="HNL";
     	}
     	$db_ext=new DbExt;
     	$stmt="SELECT  * FROM
@@ -4931,7 +4931,7 @@ $htm.='<div class="b uk-text-muted">'."$addon_raw_price ".qTranslate($val_subs[2
     	if ( $res=$db_ext->rst($stmt)){
     		return $res[0]['currency_symbol'];
     	}
-    	return "$";
+    	return "L.";
     }
 
     public function adminSetCounryCode()

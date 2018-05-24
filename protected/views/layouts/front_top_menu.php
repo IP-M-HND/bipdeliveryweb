@@ -13,10 +13,17 @@
 
   <div class="col-xs-1 menu-nav-mobile border relative">
      <a href="#"><i class="ion-android-menu"></i></a>
-  </div> <!--menu-nav-mobile-->
+  </div>
+
+  <a href="tel:+50425124060">
+    <div class="col-xs-1 menu-nav-mobile border relative">
+        <img src="<?php echo assetsURL()."/images/telefonoblanco.png"?>" alt="" style="min-width: 26px;min-height: 26px;">
+    </div>
+  </a>
+  <!--menu-nav-mobile-->
 
   <?php if ( Yii::app()->controller->action->id =="menu"):?>
-  <div class="col-xs-1 cart-mobile-handle border relative hidden">     
+  <div class="col-xs-1 cart-mobile-handle border relative hidden">
       <div class="badge cart_count"></div>
      <a href="<?php echo Yii::app()->createUrl('store/cart')?>">
        <i class="ion-ios-cart"></i>

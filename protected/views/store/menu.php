@@ -139,7 +139,7 @@ if(empty($close_msg)){
 	$close_msg=t("This restaurant is closed now. Please check the opening times.");
 }*/
 echo CHtml::hiddenField('merchant_close_msg',
-isset($checkout['msg'])?$checkout['msg']:t("Sorry merchant is closed."));
+isset($checkout['msg'])?$checkout['msg']:t("El Restaurante esta cerrado ahora."));
 
 echo CHtml::hiddenField('disabled_website_ordering',getOptionA('disabled_website_ordering'));
 echo CHtml::hiddenField('web_session_id',session_id());

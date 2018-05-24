@@ -53,7 +53,7 @@ dump($merchant_tax);*/
         <div class="col-md-1 col-xs-1 relative food-price-wrap border hidden">
           <?php if ( $disabled_addcart==""):?>
 
-          <a href="javascript:;" class="dsktop menu-item <?php echo $val_item['not_available']==2?"item_not_available":''?>" 
+          <a href="javascript:;" class="dsktop menu-item <?php echo $val_item['not_available']==2?"item_not_available":''?>"
             rel="<?php echo $val_item['item_id']?>"
             data-single="<?php echo $val_item['single_item']?>"
             <?php echo $atts;?>
